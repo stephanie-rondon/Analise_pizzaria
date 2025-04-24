@@ -4,80 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-    <title>Pizzaria Nami</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="pizza2.png">
+    <title>Document</title>
 </head>
 
 <body>
-    <!--Navigation-->
-    <nav class="navbar">
-        <a href="#home" class="logo"> Pizzaria Nami</a>
-        <ul class="nav-links">
-            <li> <a href="#home">Home</a></li>
-            <li> <a href="#cardapio">Cardápio</a></li>
-            <li> <a href="#contato">Contato</a></li>
-            <li> <a href="#sobre">Sobre</a></li>
-            <li> <a href="#suporte">Suporte</a></li>
-        </ul>
-    </nav>
+    <form>
+        <h3>CADASTRO</h3>
+        <input type="text" placeholder="login" id="login">
+        <input type="password" placeholder="senha" id="senha">
+        <input type="e-mail" placeholder="e-mail" id="e-mail">
+        <input type="tel" id="phone" placeholder="(xx) xxxxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <input type="submit" onclick="logar(); return false">
+    </form>
 
-    <div class="linha">
-        <!--hero section-->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="Pizza1.jpg" alt="Profile" class="Profile img">
-                </div>
-                <p>A pizzaria Nami está aqui para acompanhar os seus melhores momentos.</p>
-            </div>
-        </section>
+    <script>
+        function logar() {
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+            if(login == 'admin' && senha == "123"){
+                alert('sucesso');
+                location.href= "home.html";
+            } else {
+                alert('usuário ou senha incorreto')
+            }
+        }
 
-        <!--Cardápio section-->
-        <section id="cardapio" class="cardapio">
-            <h2> CARDÁPIO </h2>
-            <div class="skill-grid">
-                <div class="skill-card">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <h3> Clássica </h3>
-                    <p>Portuguesa</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <h3> Gourmet </h3>
-                    <p> Strogonoff </p>
-                </div>
-            </div>
-        </section>
-
-        <!--Contato Section-->
-        <section id="contato" class="contato">
-            <div class="hero-content">
-                <h1> CONTATO </h1>
-                <p>Pode nos contatar nas nossas redes sociais: @Pizzaria_Nami, ou pelo nosso WhatsApp: 41996129090</p>
-            </div>
-        </section>
-
-        <!--Sobre Section-->
-        <section id="sobre" class="sobre">
-            <div class="hero-content">
-                <h1> SOBRE NÓS </h1>
-                <p>A nossa trajetória começou em 2020.</p>
-            </div>
-        </section>
-
-        <!--Suporte Section-->
-        <section id="suporte" class="suporte">
-            <div class="hero-content">
-                <h1> PRECISA DE AJUDA? </h1>
-                <p>Entre em contato conosco pelo nosso gmail: pizzaria_nami@gmail.com</p>
-            </div>
-        </section>
-    </div>
+    </script>
 </body>
-
 </html>
