@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="icon" type="image/png" href="pizza2.png">
 </head>
-
 <body>
     <form>
-        <h3>CADASTRO</h3>
-        <input type="text" placeholder="login" id="login">
-        <input type="password" placeholder="senha" id="senha">
-        <input type="e-mail" placeholder="e-mail" id="e-mail">
-        <input type="tel" id="phone" placeholder="(xx) xxxxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-        <input type="submit" onclick="logar(); return false">
+        <h3>Faça o seu login</h3>
+        <div class="campo-input">
+             <input type="text" placeholder="login" id="login">
+        </div>
+        <div class="campo-input">
+            <input type="password" placeholder="senha" id="senha">
+        </div>
+        <div class="campo-input">
+            <input type="e-mail" placeholder="e-mail" id="e-mail">
+        </div>
+        <div class="campo-input">
+            <input type="tel" id="phone" placeholder="(xx) xxxxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </div>
+        <div class="campo">
+            <input type="submit" onclick="logar(); return false">
+        </div>
     </form>
-
     <script>
         function logar() {
             var login = document.getElementById('login').value;
@@ -28,7 +37,6 @@
                 alert('usuário ou senha incorreto')
             }
         }
-
     </script>
 </body>
 </html>
